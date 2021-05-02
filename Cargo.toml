@@ -10,6 +10,6 @@ categories = ["rust-patterns", "no-std", "mathematics"]
 repository = "https://github.com/thomcc/nonzero_lit"
 documentation = "https://docs.rs/nonzero_lit"
 homepage = "https://github.com/thomcc/nonzero_lit"
-license = "MIT OR Apache-2.0 OR CC0"
+license = "MIT OR Apache-2.0 OR CC0-1.0"
 
 [dependencies]
