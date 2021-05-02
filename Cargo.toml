@@ -1,0 +1,15 @@
+[package]
+name = "nonzero_lit"
+version = "0.1.0"
+authors = ["Thom Chiovoloni <chiovolonit@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+description = "Easy, safe, and fully zero-cost NonZero constants and literals."
+keywords = ["nonzero", "non_zero", "int", "const", "literal", "constant"]
+categories = ["rust-patterns", "no-std", "mathematics"]
+repository = "https://github.com/thomcc/nonzero_lit"
+documentation = "https://docs.rs/nonzero_lit"
+homepage = "https://github.com/thomcc/nonzero_lit"
+license = "MIT OR Apache-2.0 OR CC0"
+
+[dependencies]
