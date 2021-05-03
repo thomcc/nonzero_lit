@@ -709,7 +709,7 @@ pub mod _private {
             pub const fn $nz_func<const N: $int>() -> $NonZeroInt {
                 // Note: Hacky const fn assert.
                 let _ = ["N must not be zero"][(N == 0) as usize];
-                
+
                 match $NonZeroInt::new(N) {
                     Some(x) => x,
                     // The assert above makes this branch unreachable
