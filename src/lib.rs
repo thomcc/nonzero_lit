@@ -150,7 +150,6 @@
 ///
 /// Macro is robust in the face of `#[allow(...)]`.
 /// ```compile_fail
-/// # use nonzero_lit::usize;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroUsize = nonzero_lit::usize!(0);
 /// ```
@@ -162,7 +161,6 @@
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::usize;
 /// let bar = 3;
 /// let foo = nonzero_lit::usize!(bar);
 /// ```
@@ -202,14 +200,12 @@ macro_rules! usize {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::isize;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroIsize = nonzero_lit::isize!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::isize;
 /// let bar = 3;
 /// let foo = nonzero_lit::isize!(bar);
 /// ```
@@ -249,14 +245,12 @@ macro_rules! isize {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::u8;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroU8 = nonzero_lit::u8!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::u8;
 /// let bar = 3;
 /// let foo = nonzero_lit::u8!(bar);
 /// ```
@@ -296,14 +290,12 @@ macro_rules! u8 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::i8;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroI8 = nonzero_lit::i8!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::i8;
 /// let bar = 3;
 /// let foo = nonzero_lit::i8!(bar);
 /// ```
@@ -343,14 +335,12 @@ macro_rules! i8 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::u16;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroU16 = nonzero_lit::u16!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::u16;
 /// let bar = 3;
 /// let foo = nonzero_lit::u16!(bar);
 /// ```
@@ -390,14 +380,12 @@ macro_rules! u16 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::i16;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroI16 = nonzero_lit::i16!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::i16;
 /// let bar = 3;
 /// let foo = nonzero_lit::i16!(bar);
 /// ```
@@ -437,14 +425,12 @@ macro_rules! i16 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::u32;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroU32 = nonzero_lit::u32!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::u32;
 /// let bar = 3;
 /// let foo = nonzero_lit::u32!(bar);
 /// ```
@@ -484,14 +470,12 @@ macro_rules! u32 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::i32;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroI32 = nonzero_lit::i32!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::i32;
 /// let bar = 3;
 /// let foo = nonzero_lit::i32!(bar);
 /// ```
@@ -531,14 +515,12 @@ macro_rules! i32 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::u64;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroU64 = nonzero_lit::u64!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::u64;
 /// let bar = 3;
 /// let foo = nonzero_lit::u64!(bar);
 /// ```
@@ -578,14 +560,12 @@ macro_rules! u64 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::i64;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroI64 = nonzero_lit::i64!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::i64;
 /// let bar = 3;
 /// let foo = nonzero_lit::i64!(bar);
 /// ```
@@ -625,14 +605,12 @@ macro_rules! i64 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::u128;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroU128 = nonzero_lit::u128!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::u128;
 /// let bar = 3;
 /// let foo = nonzero_lit::u128!(bar);
 /// ```
@@ -672,14 +650,12 @@ macro_rules! u128 {
 ///
 /// Even if dodgy code tries to `#[allow(...)]` it.
 /// ```compile_fail
-/// # use nonzero_lit::i128;
 /// #[allow(const_err)]
 /// const ZERO: core::num::NonZeroI128 = nonzero_lit::i128!(0);
 /// ```
 ///
 /// Note: argument must be a constant expression.
 /// ```compile_fail
-/// # use nonzero_lit::i128;
 /// let bar = 3;
 /// let foo = nonzero_lit::i128!(bar);
 /// ```

@@ -23,7 +23,7 @@ A small macro crate providing safe, easy, and fully zero-cost way to construct c
     - [`core::num::NonZeroU8`](https://doc.rust-lang.org/nightly/core/num/struct.NonZeroU8.html) via the [`nonzero_lit::u8!`](https://docs.rs/nonzero_lit/%2A/nonzero_lit/macro.u8.html) macro.
     - [`core::num::NonZeroI8`](https://doc.rust-lang.org/nightly/core/num/struct.NonZeroI8.html) via the [`nonzero_lit::i8!`](https://docs.rs/nonzero_lit/%2A/nonzero_lit/macro.i8.html) macro.
 
-- Fully zero cost, even for debug builds — we always evaluate the constant as a `const`.
+- Fully zero cost, even for debug builds — we always evaluate the constant as a `const`, even when the result is used as part of a non-const expression.
 - Input to the macros can be arbitrary constant expressions. This includes `const fn` calls, which would be more difficult to verify the result as non-zero by hand.
 - Misuse (trying to make a `NonZero$Int` with a zero value) is always detected at compile time, even when the macro is not being used to initialize a constant.
 - No unsafe code.
