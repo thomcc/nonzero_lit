@@ -2,7 +2,7 @@
 [![Build Status](https://github.com/thomcc/nonzero_lit/workflows/CI/badge.svg)](https://github.com/thomcc/nonzero_lit/actions)
 [![Docs](https://docs.rs/nonzero_lit/badge.svg)](https://docs.rs/nonzero_lit)
 [![Latest Version](https://img.shields.io/crates/v/nonzero_lit.svg)](https://crates.io/crates/nonzero_lit)
-![Minimum Rust Version](https://img.shields.io/badge/MSRV%201.51-blue.svg)
+![Minimum Rust Version](https://img.shields.io/badge/MSRV%201.47-blue.svg)
 
 A small macro crate providing safe, easy, and fully zero-cost way to construct constant or literal instances of the `NonZero*` types from `core::num`.
 
