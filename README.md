@@ -49,8 +49,11 @@ assert_eq!(FERRIS.get(), 0xf34415);
 ```
 
 ```rust
-const FERRIS: core::num::NonZeroU32 = nonzero_lit::u32!(0xf34415);
-assert_eq!(FERRIS.get(), 0xf34415);
+use core::num::NonZeroU64;
+const MASK: NonZeroU64 = nonzero_lit::u64!(0xffff_00ff_00ff_0f0f);
+const MASKEE: NonZeroU64 = nonzero_lit::u64!(0xaabb_ccdd_eeff_1122);
+const MASKED: NonZeroU64 = nonzero_lit::u64!(MASK.get() & MASKEE.get());
+assert_eq!(MASKED.get(), 0xaabb_00dd_00ff_0102_u64);
 ```
 
 ## License
