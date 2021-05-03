@@ -44,8 +44,7 @@
 //! - Misuse (trying to make a `NonZero$Int` with a zero value) is always
 //!   detected at compile time, even when the macro is not being used to
 //!   initialize a constant.
-//! - Only one line of unsafe, trivially auditable (and hopefully avoidable in
-//!   future versions of Rust).
+//! - No unsafe code.
 //!
 //! # Examples
 //!
@@ -125,6 +124,7 @@
 //! # let _ = UH_OH; // silence unused warning
 //! ```
 #![no_std]
+#![forbid(unsafe_code)]
 
 /// Create a literal [`NonZeroUsize`](core::num::NonZeroUsize).
 ///
@@ -709,8 +709,12 @@ pub mod _private {
             pub const fn $nz_func<const N: $int>() -> $NonZeroInt {
                 // Note: Hacky const fn assert.
                 let _ = ["N must not be zero"][(N == 0) as usize];
-                // SAFETY: we've verified `N` is not 0.
-                unsafe { $NonZeroInt::new_unchecked(N) }
+                
+                match $NonZeroInt::new(N) {
+                    Some(x) => x,
+                    // The assert above makes this branch unreachable
+                    None => loop {},
+                }
             }
         )+};
     }

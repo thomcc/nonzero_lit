@@ -26,7 +26,7 @@ A small macro crate providing safe, easy, and fully zero-cost way to construct c
 - Fully zero cost, even for debug builds — we always evaluate the constant as a `const`.
 - Input to the macros can be arbitrary constant expressions. This includes `const fn` calls, which would be more difficult to verify the result as non-zero by hand.
 - Misuse (trying to make a `NonZero$Int` with a zero value) is always detected at compile time, even when the macro is not being used to initialize a constant.
-- Only one line of unsafe, trivially verifiable as correct (and hopefully avoidable in future versions of Rust).
+- No unsafe code.
 
 ## Usage
 Add this to your Cargo.toml:
